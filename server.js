@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes)
 
 // Conect to mongoose 
-mongoose.connect('mongodb+srv://user:<password>@cluster0-5jpab.mongodb.net/test?retryWrites=true&w=majority', function(error){
+mongoose.connect('mongodb://localhost/googlebooksapp', function(error){
    if(error){
       throw error; 
    }else{
