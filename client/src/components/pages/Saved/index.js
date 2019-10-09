@@ -1,28 +1,49 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { Container} from "../../Global/Grid";
+import { Container } from "../../Global/Grid";
 import SavedResult from "../../Global/SavedResult"
 
 class SaveBook extends Component {
     state = {
-        savedBooks: []
+        savedBooks: [],
+        target: "",
+        noResults: false
         
     };
    
-
-    //when this component mounts, grab all books that were save to the database 
     componentDidMount() {
-        API.getBooks()
-            .then(res => this.setState({ savedBooks: res.data }))
-            .catch(err => console.log(err))
-    }
+        this.getSavedBooks();
+      }
+    
+      getSavedBooks = () => {
+        API.getAllBooks()
+          .then(res => {
+            if (res.data.length > 0) {
+              this.setState({
+                savedBooks: res.data,
+                target: "_blank"
+              });
+            
+            } else {
+              this.setState({
+                noResults: true
+              });
+            }
+    
+          })
+          .catch(err => console.log(err));
+      }
+
+   
 
     //function to remove book by id
     handleDeleteButton = id => {
         API.deleteBook(id)
             .then(res => this.componentDidMount())
-            .catch(err => console.log(err))
+            .catch(err => console.log(err));
+           
     }
+    
 
     render() {
         return (

@@ -2,16 +2,17 @@ const router = require("express").Router();
 const booksController = require("../../controllers/bookController");
 
 
-// Api/book
-router.route9("/")
+// This route is called api/book
+router.route("/")
     .get(booksController.findAll)
-    .post(booksController.create);
+    .post(booksController.create)
+   
 
 
-// Api/books/:id
-router.route9("/:id")
+// api/books/:id
+router.route("/:id")
     .get(booksController.findById)
-    .pu(booksController.update)
+    .put(booksController.update)
     .delete(booksController.remove);
 
 module.exports = router;

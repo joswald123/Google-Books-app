@@ -27,45 +27,45 @@ class Home extends Component {
             .then(res => {
                 if (res.data.items === "error") {
                     throw new Error(res.data.items);
+                   
                 }
                 else {
                     // store response in a array
                     let results = res.data.items
                     //map through the array 
                     results = results.map(result => {
-                        console.log(result);
                         //store each book information in a new object 
                         result = {
                             key: result.id,
                             id: result.id,
                             title: result.volumeInfo.title,
-                            author: result.volumeInfo.authors,
+                            authors: result.volumeInfo.authors,
                             description: result.volumeInfo.description,
                             image: result.volumeInfo.imageLinks.thumbnail,
                             link: result.volumeInfo.infoLink
                             
                         }
                         return result;
+                       
                         
                     })
+                    
                     // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
                     this.setState({ books: results, error: "" })
-                    
+                   
                 }
             })
             .catch(err => this.setState({ error: err.items }));
     }
 
     handleSavedButton = event => {
-        console.log(event)
+       
         event.preventDefault();
-        console.log(this.state.books)
         let savedBooks = this.state.books.filter (book => book.id === event.target.id)
         savedBooks = savedBooks[0];
         API.saveBook(savedBooks)
             .then(this.setState({ message: alert("Your book is saved") }))
             .catch(err => console.log(err))
-            console.log(`Libro guardado ${savedBooks}`);
     }   
     render() {
         return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 
 const SearchForm = props => {
     return (
@@ -15,7 +15,7 @@ const SearchForm = props => {
                     onChange={props.handleInputChange}
                 />
             </div>
-            <button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
+            <button type="submit" className="submitBtn btn btn-secondary" onClick={props.handleFormSubmit}>
                 Submit
             </button>
         </form>
