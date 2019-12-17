@@ -1,9 +1,9 @@
-# Google Book Search: : React | JavaScript | Node.js | Bootstrap | Google API | Express | MongoDB | MySQL | 
+# Google Book Search: React | JavaScript | Node.js | Bootstrap | Google API | Express | MongoDB | MySQL | 
 
 MERN-Stack App created with React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. also it uses Node, Express and MongoDB so that users can save books to review or purchase later.
 
 
-![Game Screen](client/src/assets/imgs/Capture1.PNG)
+![Game Screen](client/src/assets/images/Capture1.PNG)
 
 ![code](client/src/assets/imgs/Capture2.PNG)  
 
