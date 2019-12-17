@@ -2,14 +2,18 @@
 
 MERN-Stack App created with React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. also it uses Node, Express and MongoDB so that users can save books to review or purchase later.
 
+# Home Page Screen
+![Home Page Screen](client/src/assets/images/Capture1.PNG)
 
-![Game Screen](client/src/assets/images/Capture1.PNG)
+# Home Page Screen - Book Searched
+![Home Page Screen](client/src/assets/images/Capture2.PNG)  
 
-![code](client/src/assets/imgs/Capture2.PNG)  
+# Saved Page Screen 
+![Saved Page Screen](client/src/assets/images/Capture3.PNG)  
 
-![code](client/src/assets/imgs/Capture3.PNG)  
+# The Book's information link as returned from the Google Books API
 
-![code](client/src/assets/imgs/Capture-Google-API.PNG)  
+![Google API Website](client/src/assets/images/Capture-Google-API.PNG)  
 
 
 ## Preview
