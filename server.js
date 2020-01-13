@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3005;
 const app = express();
 
 // Define middleware here
-app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -21,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes)
 
 // Conect to mongoose 
-mongoose.connect('mongodb://localhost/googlebooksapp', function(error){
+mongoose.connect('mongodb://localhost/teamevents', function(error){
    if(error){
       throw error; 
    }else{
